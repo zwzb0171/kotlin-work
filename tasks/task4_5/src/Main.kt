@@ -3,5 +3,21 @@
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
-    // Add your code here
+    if (args.size != 1) {
+        println("Incorrect number of arguments supplied")
+        exitProcess(1)
+    }
+
+    val limit = args[0].toIntOrNull()
+    if (limit == null) {
+        println("Limit must be an integer")
+        exitProcess(1)
+    }
+
+    var sum = 0L
+    for (n in 1..limit step 2) {
+        sum += n
+    }
+
+    println("Sum of odd integers from 1 to $limit is $sum")
 }
