@@ -2,9 +2,9 @@
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
-    if (args.size != 1) {
-        println("Incorrect number of arguments supplied")
-        exitProcess(1)
+    if (args.isEmpty()) {
+        rollDie()
+        return
     }
 
     val sides = args[0].toIntOrNull()

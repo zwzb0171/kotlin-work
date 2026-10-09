@@ -1,4 +1,4 @@
-// Task 5.4.1: main program
+// Task 5.4.2: main program
 fun main() {
     val tests = listOf(
         "",
@@ -9,6 +9,6 @@ fun main() {
     )
 
     for (s in tests) {
-        println("\"$s\" (length ${s.length}) is too long: ${s.isTooLong()}")
+        println("\"$s\" (length ${s.length}) is too long: ${s.isTooLong}")
     }
 }
